@@ -1,0 +1,152 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* sayfadaki borderi kaldırır kenarlardaki gözükmeyen boşluk*/
+}
+
+html{  /* tüm öğeleri kapsar*/
+    font-size: 8px;
+}
+
+body{       /*google font yazi tipi css i*/
+    font-family: 'Open Sans', sans-serif;   
+    color: #fff;
+    font-size: 1.6rem;  /* rem html hepsini kaplardı body nin içindeki 1.6rem  10px çarpı 1.6 demek */
+    line-height:  1.5; /* satırlar arası boşluk*/
+    text-align: center; /* yazıyı ortalar*/ 
+    background-color: #333;
+}
+
+a{
+    text-decoration: none; /* linkin alt çizgisini siler*/
+}
+
+p{
+    padding: 1.6rem 0;
+}
+
+header{
+    height: 46rem;  /* html de 10px yaptığımız için  46rem çarpı 10px = 460px demek oluyur*/
+    
+}
+header .bg-image {
+    position: absolute;
+    background-image: url(images/avatar.png);  /*arka plana resim ekliyoruz.*/
+    background-size: cover;
+    background-position: center; /* konumu demek center ortalar*/
+    height: 46rem;
+    width: 100%;
+    opacity: 0.6;  /*altındaki zeminin rengide etkiler*/ /* resmi solgunlaştirir*/
+    z-index: -1;  /* görseli bir alt zemine gönderir yazı yukarı çıkar*/
+}
+
+header h1 {
+    padding: 12rem;
+    padding-bottom: 0;
+}
+
+.btn{
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    border: 1px solid #666;
+    padding: 1.6rem 3.2rem ;  /* ilki üstten ve alttan ikincisi sağdan ve soldan*/
+    margin: 0.7rem 0;
+    transition: all 0.6s;  /* her birtaraftan 0.5 saniye yavaşla  düğmeye geldiğimizde rengi yavaş yavaş beyaza döner*/
+}
+.btn:hover {
+    background-color:white;
+    color: #333;
+    border-radius: 100px;
+}
+
+
+
+
+
+#section-a{
+    background-color: #eaeaea;
+    color: #333;
+    padding: 3.2rem 0;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+#section-b{
+    padding: 2rem;
+}
+#section-b ul{   /* section-b içindeki ul*/
+    list-style: none;  /* ul nin noktaları kalkar listelerin noktaları kalkar*/
+}
+
+#section-b li{
+    background: #fff;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.col-content{
+    padding: 1.5rem;
+}
+
+
+
+#section-c{
+    background-color: #eaeaea;
+    color: #333;
+    padding: 5rem;
+}
+#section-d .box{
+    padding: 5rem;
+}
+#section-d .box:first-child{    /*:first-child  box ilk elemanına özellik ver demek*/
+    background-color: darkslategray;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+
+footer{
+    padding: 4rem;
+    background: black;
+}
+footer a {
+    color: yellowgreen;
+}
+
+
+
+@media screen and (min-width:800px) {  /* 800px ve üzerine çiktiğinda*/
+
+    html{
+        font-size: 10px;   /* 800px üzerine çiktiğinda 10px olur yazılar*/
+    }
+    
+}
+
+@media screen and (min-width:1200px) {  /* 800px ve üzerine çiktiğinda*/
+
+    html{
+        font-size: 11px;
+    }
+    #section-b li{
+        width: 28%;
+        margin: 1%;
+        display: inline-block;
+    }
+    .box{
+        width: 50%;
+        float: left;
+    }
+    
+}
+
+
+
+
